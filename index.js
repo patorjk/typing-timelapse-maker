@@ -1,22 +1,24 @@
 /*
-	TODO:
-
-	- Read in parameters
-	--- node index.js -i input-file -o output-dir -l layout-type
-	- Open and read file contents
-	- Loop through characters - max is 400
-	- Setup key map
-	- Setup images
-	- Figure out how to copy images to dist directory
-
 Example usage:
 
-$ node index -i inputs/test1.txt -o ./output -e -l dvorak
+$ node index -i inputs/75_most_common_words.txt -o ./output -e -l dvorak
 
-- Input file will be "inputs/test1.txt"
+- Input file will be "inputs/75_most_common_words.txt".
 - Output directory for timelapse images will be ./output
-- 5 frames will be used for each keystroke (e means equal frames)
-- Layout will be dvorak
+- 5 frames will be used for each keystroke (e means equal frames). If you don't want this, just don't include the "-e" parameter.
+- Layout will be dvorak. If "-l" is omitted, QWERTY will be the layout (probably what you want).
+
+*** Making the Video
+* Once the image set has been created, you'll need a tool to put them together into a video. 
+  I highly recommend TLDF (http://timelapsedeflicker.com/). It will smooth out the flickering
+  between images. The free version support the size of the images this app uses.
+* If you can't use TLDF, Time Lapse Assembler (http://www.dayofthenewdan.com/projects/time-lapse-assembler-1/)
+  is another option. However, it wont de-flicker the images.
+
+*** Your Own Images
+* If you want to use your own images, you'll just need to modify the "lib/key-frame-map.js" file.
+* If your image set requires more than 5 frames per key press, you'll need to edit the
+  "lib/typing-timelapse-maker.js" file (change the 5 to whatever).
 
 */
 
@@ -91,5 +93,3 @@ for (ii = 0; ii < contents.length; ii++) {
 if (count > 1) {
 	timelapse.writeFramesForKey(ch, count);
 }
-
-console.log(__dirname);

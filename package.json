@@ -14,5 +14,9 @@
   "devDependencies": {
     "fs-extra": "^2.0.0",
     "minimist": "^1.2.0"
+  },
+  "dependencies": {
+    "fs-extra": "^2.1.2",
+    "path": "^0.12.7"
   }
 }
