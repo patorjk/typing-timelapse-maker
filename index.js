@@ -11,7 +11,7 @@ $ node index -i inputs/75_most_common_words.txt -o ./output -e -l dvorak
 *** Making the Video
 * Once the image set has been created, you'll need a tool to put them together into a video. 
   I highly recommend TLDF (http://timelapsedeflicker.com/). It will smooth out the flickering
-  between images. The free version support the size of the images this app uses.
+  between images. The free version also supports the size of the images this app uses.
 * If you can't use TLDF, Time Lapse Assembler (http://www.dayofthenewdan.com/projects/time-lapse-assembler-1/)
   is another option. However, it wont de-flicker the images.
 
