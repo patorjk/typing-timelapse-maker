@@ -25,8 +25,8 @@ var fs = require('fs');
 var TypingTimelapseMaker = require('./lib/typing-timelapse-maker');
 
 var layoutMap = {};
-layoutMap.dvorak = require('./lib/qwerty-to-dvorak');
-layoutMap.colemak = require('./lib/qwerty-to-colemak');
+layoutMap.dvorak = require('./lib/dvorak-to-qwerty');
+layoutMap.colemak = require('./lib/colemak-to-qwerty');
 
 var inputFile = argv.i;
 var outputDir = argv.o;
